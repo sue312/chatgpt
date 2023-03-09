@@ -43,24 +43,24 @@ public class ChatMessageView extends LinearLayout {
         messageTextData.setText(strDate);
     }
 
-    public void setAvatarImage(String url) {
-        new Thread(() -> {
-            try {
-                Bitmap bitmap = getBitmapFromURL(url);
-                avatarImageView.post(() -> avatarImageView.setImageBitmap(bitmap));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }).start();
-    }
-
-    private Bitmap getBitmapFromURL(String src) throws IOException {
-        URL url = new URL(src);
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setDoInput(true);
-        connection.connect();
-        InputStream input = connection.getInputStream();
-        Bitmap myBitmap = BitmapFactory.decodeStream(input);
-        return myBitmap;
-    }
+//    public void setAvatarImage(String url) {
+//        new Thread(() -> {
+//            try {
+//                Bitmap bitmap = getBitmapFromURL(url);
+//                avatarImageView.post(() -> avatarImageView.setImageBitmap(bitmap));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }).start();
+//    }
+//
+//    private Bitmap getBitmapFromURL(String src) throws IOException {
+//        URL url = new URL(src);
+//        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//        connection.setDoInput(true);
+//        connection.connect();
+//        InputStream input = connection.getInputStream();
+//        Bitmap myBitmap = BitmapFactory.decodeStream(input);
+//        return myBitmap;
+//    }
 }

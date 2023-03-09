@@ -31,7 +31,7 @@ public class ChatListAdapter extends ArrayAdapter<ChatMessage> {
 
         messageView.setMessageText(message.getMessageText());
         messageView.setMessageTextData(message.getTimestamp());
-        messageView.setAvatarImage(message.getAvatarImageURL());
+        //messageView.setAvatarImage(message.getAvatarImageURL());
 
         return messageView;
     }

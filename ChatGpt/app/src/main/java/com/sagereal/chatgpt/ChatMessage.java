@@ -3,39 +3,33 @@ package com.sagereal.chatgpt;
 import java.util.Date;
 
 public class ChatMessage {
-    private String senderName;
+
+    public static String SENT_BY_ME = "me";
+    public static String SENT_BY_BOT="bot";
+
     private String messageText;
-    private String avatarImageURL;
     private Date timestamp;
-    private boolean isSentByMe;
+    private String sentBy;
 
-    public ChatMessage(String senderName, String messageText, String avatarImageURL, Date timestamp, boolean isSentByMe) {
-        this.senderName = senderName;
+    public ChatMessage(String messageText, Date timestamp, String sentBy) {
         this.messageText = messageText;
-        this.avatarImageURL = avatarImageURL;
         this.timestamp = timestamp;
-        this.isSentByMe = isSentByMe;
-    }
-
-    public String getSenderName() {
-        return senderName;
+        this.sentBy = sentBy;
     }
 
     public String getMessageText() {
         return messageText;
     }
 
-    public String getAvatarImageURL() {
-        return avatarImageURL;
-    }
 
     public Date getTimestamp() {
         return timestamp;
     }
 
-    public boolean isSentByMe() {
-        return isSentByMe;
+    public String getSentBy() {
+        return sentBy;
     }
+
 }
 
 
